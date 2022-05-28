@@ -1,0 +1,1 @@
+docker run -t --env INPUT_FILE='d' --env  OUTPUT_FILE='A' recognizer

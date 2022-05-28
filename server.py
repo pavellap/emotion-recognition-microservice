@@ -1,0 +1,23 @@
+from flask import Flask, request
+from flask_cors import CORS
+import os
+import uuid
+from main import recognize
+
+app = Flask(__name__)
+CORS(app)
+UPLOAD_FOLDER = './audios'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
+@app.route("/audio", methods=['POST'])
+def audio():
+    print(request.files)
+    file = request.files['wavfile']
+    hash_name = uuid.uuid4().hex + '.wav'
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], hash_name))
+    return recognize(hash_name)
+
+
+if __name__ == "__main__":
+    app.run(port=15000, debug=True, host='0.0.0.0')

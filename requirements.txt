@@ -1,0 +1,8 @@
+librosa
+numba
+numpy
+soundfile
+sklearn
+matplotlib
+flask
+flask-cors
