@@ -10,27 +10,27 @@ UPLOAD_FOLDER = './audios'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 recognizeMapper = {
-    fs: {
+    'fs': {
         success: True,
         gender: 'female',
         emotion: 'sad'
     },
-    fh: {
+    'fh': {
         success: True,
         gender: 'female',
         emotion: 'happy'
     },
-    ma: {
+    'ma': {
         success: True,
         gender: 'male',
         emotion: 'angry'
     },
-    ms: {
+    'ms': {
         success: True,
         gender: 'male',
         emotion: 'sad'
     },
-    mh: {
+    'mh': {
         success: True,
         gender: 'male',
         emotion: 'happy'
