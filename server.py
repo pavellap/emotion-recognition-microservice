@@ -11,29 +11,29 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 recognizeMapper = {
     'fs': {
-        success: True,
-        gender: 'female',
-        emotion: 'sad'
+        'success': True,
+        'gender': 'female',
+        'emotion': 'sad'
     },
     'fh': {
-        success: True,
-        gender: 'female',
-        emotion: 'happy'
+        'success': True,
+        'gender': 'female',
+        'emotion': 'happy'
     },
     'ma': {
-        success: True,
-        gender: 'male',
-        emotion: 'angry'
+        'success': True,
+        'gender': 'male',
+        'emotion': 'angry'
     },
     'ms': {
-        success: True,
-        gender: 'male',
-        emotion: 'sad'
+        'success': True,
+        'gender': 'male',
+        'emotion': 'sad'
     },
     'mh': {
-        success: True,
-        gender: 'male',
-        emotion: 'happy'
+        'success': True,
+        'gender': 'male',
+        'emotion': 'happy'
     }
 }
 
