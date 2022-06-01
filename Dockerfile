@@ -15,4 +15,4 @@ COPY . .
 
 CMD /opt/venv/bin/python server.py
 
-EXPOSE 15000
+EXPOSE 15000 80 443

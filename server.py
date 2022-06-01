@@ -9,6 +9,33 @@ CORS(app)
 UPLOAD_FOLDER = './audios'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+recognizeMapper = {
+    fs: {
+        success: True,
+        gender: 'female',
+        emotion: 'sad'
+    },
+    fh: {
+        success: True,
+        gender: 'female',
+        emotion: 'happy'
+    },
+    ma: {
+        success: True,
+        gender: 'male',
+        emotion: 'angry'
+    },
+    ms: {
+        success: True,
+        gender: 'male',
+        emotion: 'sad'
+    },
+    mh: {
+        success: True,
+        gender: 'male',
+        emotion: 'happy'
+    }
+}
 
 @app.route("/audio", methods=['POST'])
 def audio():
@@ -18,6 +45,10 @@ def audio():
     file.save(os.path.join(app.config['UPLOAD_FOLDER'], hash_name))
     return recognize(hash_name)
 
+@app.route("/preprocessed", methods=['GET'])
+def predefined():
+    target = request.args.get("target")
+    return recognizeMapper[target]
 
 if __name__ == "__main__":
     app.run(port=15000, debug=True, host='0.0.0.0')

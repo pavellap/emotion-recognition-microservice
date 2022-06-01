@@ -1,7 +1,7 @@
-librosa
 numba
 numpy
-soundfile
+librosa==0.6.3
+soundfile==0.9.0
 sklearn
 matplotlib
 flask
